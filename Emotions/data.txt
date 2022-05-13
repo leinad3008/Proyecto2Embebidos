@@ -1,24 +1,10 @@
-Time of this capture: 7.79700000000048
-  Emotion: sadness
-Time of this capture: 12.328000000001339
-  Emotion: sadness
-Time of this capture: 16.875
-  Emotion: sadness
-Time of this capture: 21.40600000000086
+Time of this capture: 7.811999999999898
   Emotion: neutral
-Time of this capture: 25.95300000000134
-  Emotion: happy
-Time of this capture: 30.485000000000582
-  Emotion: happy
-Time of this capture: 35.03100000000086
-  Emotion: sadness
-Time of this capture: 39.57800000000134
+Time of this capture: 12.593999999999141
   Emotion: neutral
-Time of this capture: 44.125
+Time of this capture: 18.46899999999914
   Emotion: neutral
-Time of this capture: 48.67200000000048
-  Emotion: anger
-Time of this capture: 53.20300000000134
-  Emotion: sadness
-Time of this capture: 57.73500000000058
+Time of this capture: 23.23399999999856
   Emotion: happy
+Time of this capture: 28.014999999999418
+  Emotion: neutral
