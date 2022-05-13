@@ -1,7 +1,12 @@
 import cv2
+import sys
 import tensorflow as tf
 import numpy as np
 from skimage.transform import resize
+
+start = time.monotonic()
+f = open("data.txt", "a")
+
 
 def crop_center(img, x, y, w, h):
     return img[y:y+h,x:x+w]
@@ -35,6 +40,11 @@ def brain(raw, x, y, w, h):
         ano = 'sadness'
     else :
         ano = 'surprised'
+        
+    foto = time.monotonic()-start
+    print("Time of this capture: ", foto, "\n  Emotion: ", ano, "\n")
+    f.write("Time of this capture: ", foto, "\n  Emotion: ", ano, "\n")
+	
     return ano
 
 
@@ -73,6 +83,8 @@ while(True):
     )
 
     ano = ''
+    
+    
     for (x, y, w, h) in faces:
         cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
         cv2.putText(frame, ai, (x, y-5), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,0,255), 2, cv2.LINE_AA)
@@ -82,8 +94,20 @@ while(True):
 
     # Display the resulting frame
     cv2.imshow('frame',frame)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
+    
+    
+    
+    minutos = sys.argv[1]		
+    
+    time.sleep(5)
+    
+    if (time.monotonic-start)>=(minutos*60):
+			break
+		
+		
+		
+#    if cv2.waitKey(1) & 0xFF == ord('q'):
+#        break
 
 # When everything done, release the capture
 cap.release()
