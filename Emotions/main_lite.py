@@ -1,6 +1,6 @@
 import cv2
 import sys
-import tensorflow as tf
+import tflite_runtime.interpreter as tf
 import numpy as np
 import time
 from skimage.transform import resize
@@ -52,7 +52,7 @@ def brain(raw, x, y, w, h):
 
 print('Loading ..')
 
-f = tf.lite.Interpreter("models/model_optimized.tflite")
+f = tf.Interpreter("models/model_optimized.tflite")
 f.allocate_tensors()
 i = f.get_input_details()[0]
 o = f.get_output_details()[0]

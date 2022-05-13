@@ -1,0 +1,10 @@
+Time of this capture: 7.811999999999898
+  Emotion: neutral
+Time of this capture: 12.593999999999141
+  Emotion: neutral
+Time of this capture: 18.46899999999914
+  Emotion: neutral
+Time of this capture: 23.23399999999856
+  Emotion: happy
+Time of this capture: 28.014999999999418
+  Emotion: neutral
