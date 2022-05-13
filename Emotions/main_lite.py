@@ -1,11 +1,12 @@
 import cv2
 import sys
+import time
 import tensorflow as tf
 import numpy as np
 from skimage.transform import resize
 
 start = time.monotonic()
-f = open("data.txt", "a")
+f = open("data.txt", "w+")
 
 
 def crop_center(img, x, y, w, h):
@@ -97,12 +98,13 @@ while(True):
     
     
     
-    minutos = sys.argv[1]		
+    minutos = int(sys.argv[1])
     
     time.sleep(5)
-    
-    if (time.monotonic-start)>=(minutos*60):
-			break
+    tmp = (time.monotonic()-start)
+    if tmp >= (minutos*60):
+	    break
+		
 		
 		
 		
