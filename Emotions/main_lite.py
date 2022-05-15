@@ -3,7 +3,7 @@ import sys
 import tflite_runtime.interpreter as tf
 import numpy as np
 import time
-from skimage.transform import resize
+#from skimage.transform import resize
 
 start = time.monotonic()
 
@@ -14,7 +14,7 @@ def crop_center(img, x, y, w, h):
     return img[y:y+h,x:x+w]
 
 def preprocess_img(raw):
-    img = resize(raw,(200,200, 3))
+    img = np.resize(raw,(200,200, 3))
     img = np.expand_dims(img,axis=0)
     if(np.max(img)>1):
         img = img/255.0
